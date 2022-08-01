@@ -1,0 +1,203 @@
+/* Ivan Milincic, lokomotivan@gmail.com.  http://www.kreativan.net */
+
+/* ==================================================================
+    CUSTOM
+================================================================== */
+
+/*  Overlay
+================================================================== */
+.uk-overlay-background {
+    background: rgba(0,0,0,.6);
+}
+
+/*  DOTNAV
+================================================================== */
+.uk-dotnav > * {
+    padding-left:10px;
+}
+
+.uk-dotnav > * > * {
+    position:relative;
+    box-sizing:border-box;
+    background: none;
+    border:2px solid #aaaaaa;
+}
+.uk-dotnav > * > *:before {
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-4px;
+    margin-left:-4px;
+    display:none;
+    width:8px;
+    height:8px;
+    background: #aaaaaa;
+    border-radius:50%;
+}
+.uk-dotnav > * > *:hover {
+    background: none;
+}
+.uk-dotnav > * > *:hover:before {
+    display:block;
+}
+.uk-dotnav > .uk-active > * {
+    background: #aaaaaa;
+}
+
+/*
+*   Dotnav Contarst
+*/
+.uk-dotnav.uk-dotnav-contrast > * > * {
+    border:2px solid rgba(255, 255, 255, 0.7);
+}
+.uk-dotnav.uk-dotnav-contrast > * > *:before {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/*  SLIDENAV
+================================================================== */
+.uk-slidenav:before {
+    display:none;
+}
+
+.uk-slidenav.uk-slidenav-contrast {
+    font-size:56px;
+}
+.uk-slidenav-previous::before {content: "\f104";}
+.uk-slidenav-next::before {content: "\f105";}
+
+.uk-lightbox-content .uk-slidenav:before {
+    display:block;
+}
+
+/* Slideshow
+================================================================== */
+.ivm-uk-slideshow .uk-dotnav {
+    margin:0;
+    margin-bottom:20px;
+}
+.ivm-uk-slideshow .uk-subnav {
+    margin-bottom:20px;
+}
+.ivm-uk-slideshow .uk-subnav li > a {
+    opacity:0.4;
+}
+.ivm-uk-slideshow .uk-subnav li:hover > a {
+    opacity:0.7;
+}
+.ivm-uk-slideshow .uk-subnav li.uk-active a {
+    opacity:1;
+}
+.ivm-uk-slideshow .uk-overlay-panel.uk-flex > p {
+    max-width:70%;
+}
+.ivm-uk-slideshow .uk-overlay-panel a {
+    text-decoration:none;
+}
+/*
+.ivm-uk-slideshow .uk-overlay-panel a:after {
+    font-family: FontAwesome;
+    content: "\f101";
+    margin-left:5px;
+}
+*/
+
+.ivm-uk-slideshow .uk-slidenav:before {
+    display:none;
+}
+
+.ivm-uk-slideshow .uk-article-meta {
+    color:#fff;
+}
+
+/* Phone landscape and smaller
+========================================================  */
+@media (max-width: 767px) {
+    .ivm-uk-slideshow .uk-overlay-right,
+    .ivm-uk-slideshow .uk-overlay-left {
+        display:none;
+    }
+}
+
+
+
+/* SLIDER
+================================================================== */
+.ivm-uk-slider .uk-slidenav:before {
+    display:none;
+}
+.ivm-uk-slider .uk-overlay-panel a {
+    text-decoration:none;
+}
+.ivm-uk-slider .uk-overlay-panel a:after {
+    font-family: FontAwesome;
+    content: "\f101";
+    margin-left:5px;
+}
+.ivm-uk-slider .uk-article-meta {
+    color:#fff;
+}
+
+/*  Slideset
+================================================================== */
+.uk-slideset-nav.uk-dotnav > li {
+    margin-top:0;
+}
+.uk-slideset-nav.uk-dotnav {
+    margin-top:20px;
+}
+.ivm-uk-pricing-table .uk-slidenav-position .uk-slidenav-next,
+.ivm-uk-slideset .uk-slidenav-position .uk-slidenav-next {
+    /*display:block;*/
+    right:-25px;
+}
+.ivm-uk-pricing-table .uk-slidenav-position .uk-slidenav-previous,
+.ivm-uk-slideset .uk-slidenav-position .uk-slidenav-previous {
+    /*display:block;*/
+    left:-25px;
+}
+.ivm-uk-pricing-table .uk-slidenav-position .uk-slidenav svg,
+.ivm-uk-slideset .uk-slidenav-position .uk-slidenav svg {
+    padding:13px 7px;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition:box-shadow 0.3s ease;
+    box-shadow:0 3px 7px rgba(0, 0, 0, 0.2);
+}
+.ivm-uk-pricing-table .uk-slidenav-position .uk-slidenav svg:hover,
+.ivm-uk-slideset .uk-slidenav-position .uk-slidenav svg:hover {
+    /*box-shadow:0 3px 7px rgba(0, 0, 0, 0.2);*/
+}
+.ivm-uk-pricing-table .uk-slidenav-position .uk-slidenav svg:active,
+.ivm-uk-slideset .uk-slidenav-position .uk-slidenav svg:active {
+    box-shadow:none;
+}
+
+/*  Pricing Table
+================================================================== */
+.ivm-uk-pricing-table .uk-panel a {
+    transition: opacity 0.3s ease;
+}
+.ivm-uk-pricing-table .uk-panel a:hover {
+    opacity:0.8;
+    text-decoration:none;
+}
+.ivm-uk-pricing-table .uk-panel li {
+    padding:5px 0;
+}
+.ivm-uk-pricing-table .uk-panel h1 {
+    display:inline-block;
+    position:relative;
+    font-size:54px;
+    line-height:40px;
+}
+.ivm-uk-pricing-table .uk-panel h1 > span {
+    position:absolute;
+    left:100%;
+    top:0px;
+    font-size:22px;
+    line-height:22px;
+    margin-left:5px;
+    padding-bottom:2px;
+}
