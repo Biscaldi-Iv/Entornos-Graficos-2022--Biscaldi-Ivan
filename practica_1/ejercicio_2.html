@@ -26,17 +26,117 @@
                 <hr>
                 <li>
                     <pre>
-                        <input type="text" disabled class="form-control" value="<div id='bloque1'>Contenido del bloque1</div>">
+                        <input type="text" disabled class="form-control" value='<div id="bloque1">Contenido del bloque1</div>'>
                     </pre>
                     Las etiquetas <input value="<div>" disabled style="max-width: 60px;"> y <input value="</div>" disabled style="max-width: 60px;"> 
-                    sirven para dividir secciones de codigo. No requiere ningun atributo pero soporta:
+                    sirven para dividir secciones de codigo, dentro del cuerpo del documento. No requiere ningun atributo pero soporta:
                     <ul>
                         <li>id: sirve para identificar el elemento</li>
-                        <li>class: asigna una clase al elemento</li>
+                        <li>class: asigna una clase al elemento, usualmente se usa para apuntar a clases de la hoja de estilos o de JavaScript</li>
                         <li>style: permite definir el estilo del elemento</li>
                     </ul>
                 </li>
                 <hr>
+                <li>
+                    <pre>
+                        <input type="text" disabled class="form-control" value='<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />'>
+                    </pre>
+                    La etiqueta <input disabled style="max-width: 60px;" value="<img>"> se usa para insertar imagenes en el cuerpo del documento. Crea 
+                    un espacio para la imagen a la que hara referencia. Esta etiqueta es vacia, solo contiene atributos y no requiere cierre. 
+                    <code>img</code> requerira 2 atributos:
+                    <ul>
+                        <li>src: especifica la ruta a la imagen</li>
+                        <li>alt: especifica un texto alterno que se mostrara en caso de no poder cargar la imagen</li>
+                    </ul>
+                    Ademas soporta los siguientes atributos:
+                    <ul>
+                        <li>style</li>
+                        <li>width: indica el ancho con el que se muestra la imagen</li>
+                        <li>height: indica el largo con el que se muestra la imagen</li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <pre>
+                        <textarea disabled class="form-control" rows="2">
+                            <meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+                            <meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+                        </textarea>
+                    </pre>
+                    La etiqueta <input disabled style="max-width: 70px;" value="<meta>"> es un elemento que se utiliza en la cabecera de la pagina(
+                    <input disabled style="max-width: 125px;" value="<head></head>">) y proporciona metadatos acerca del documento. Comunmente se 
+                    utiliza para especificar el formato de caracteres utilizado por la pagina(charset), descripcion de la pagina(description), 
+                    palabras clave(keywords) y configuracion de la ventana grafica(viewport). Tambien puede usarse para indicar quien es el autor 
+                    del documento(author) y cuando espira la pagina(http-equiv="expires") o cuando debe refrescarse automaticamente(http-equiv="refresh"). 
+                    Los atributos que soporta son:
+                    <ul>
+                        <li>charset: indica el formato de caracteres utilizado por la pagina</li>
+                        <li>name: se utiliza para señalar que tipo de informacion se encuentra en el atributo <i>content</i></li>
+                        <li>content: contiene informacion/metadatos cuyo tipo fue indicado por <i>name</i> o <i>http-equiv</i></li>
+                        <li>http-equiv: funciona similar a <i>name</i> pero en este caso es para indicar atributos del protocolo http</li>
+                    </ul>
+                    La informacion proporcionada en la etiqueta <i>meta</i> no se muesta en la ventana, pero puede indicar al navegador como mostrar 
+                    la pagina o cuando recargar y servir de guia para motores de busqueda(por las keywords). 
+                </li>
+                <hr>
+                <li>
+                    <pre>
+                        <input type="text" disabled class="form-control" 
+                        value='<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>'>
+                    </pre>
+                    La etiqueta <input disabled style="max-width: 70px;" value="<a></a>"> se utiliza para colocar hipervinculos en el cuerpo de la pagina. 
+                    Al hacer click sobre ellos se abren las paginas cuyo enlace fue especificado o tambien se puede mostrar una seccion de la misma pagina 
+                    cuando el enlace contiene # al comienzo. Dentro de la etiqueta se puede colocar tanto un texto como cualquier otro elemento siendo comun 
+                    el uso de imagenes. Los atributos de esta etiqueta son:
+                    <ul>
+                        <li>href: indica el enlace de otra pagina cuando este comienza con <i>http://</i> o <i>https://</i>. Si comienza con # dirigira a un 
+                        elemento de la misma pagina cuyo id es similar al texto que le sigue al #</li>
+                        <li>target: indica si el enlace debe abrirse en la misma pestaña(<i>"_self"</i>) o en una nueva(<i>"_blank"</i>), o abrir el 
+                        documento en el cuerpo completo de la ventana(<i>"_top"</i>) o abrir el documento en el marco principal(<i>"_parent"</i>) </li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <pre>
+                        <textarea disabled class="form-control" rows="23">
+                            <table width="200" summary="Datos correspondientes al ejercicio vencido">
+                                <caption align="top"> Título </caption>
+                                <tr>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col">A</th>
+                                    <th scope="col">B</th>
+                                    <th scope="col">C</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1º</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2º</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </textarea>
+                    </pre>
+                    La etiqueta <input disabled style="max-width: 135px;" value="<table></table>"> se utiliza para colocar tablas en el cuerpo de la pagina. 
+                    Una tabla consiste de celdas dentro de filas y columnas. <br>
+                    Dentro una tabla normalmente se colocan:
+                    <ul>
+                        <li><input disabled style="max-width: 165px;" value="<thead></thead>"> para agrupar el contenido de los encabezados</li>
+                        <li><input disabled style="max-width: 165px;" value="<tbody></tbody>"> para agrupar el contenido del cuerpo de la tabla</li>
+                        <li><input disabled style="max-width: 165px;" value="<tfoot></tfoot>"> para agrupar el contenido del pie de la tabla</li>
+                        <li><input disabled style="max-width: 195px;" value="<colgroup></colgroup>"> especifica un grupo de columnas para formatear</li>
+                        <li><input disabled style="max-width: 100px;" value="<col></col>"> especifica las propiedades de una colummna dentro de un grupo de columnas</li>
+                        <li><input disabled style="max-width: 165px;" value="<caption></caption>"> para definir el subtitulo de la tabla</li>
+                        <li><input disabled style="max-width: 90px;" value="<th></th>"> para definir el encabezado de una celda</li>
+                        <li><input disabled style="max-width: 90px;" value="<tr></tr>"> para definir una fila en la tabla</li>
+                        <li><input disabled style="max-width: 90px;" value="<td></td>"> para definir una celda en alguna fila</li>
+                    </ul>
+                </li>
             </ol>
             </li>
         </ol>
