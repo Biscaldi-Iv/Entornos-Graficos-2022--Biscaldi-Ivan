@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <p class="h1">Segmentos de codigo</p>
+    <p class="p">
+        <ol start="2">
+            <li>
+            <ol type="a">
+                <li>
+                    <div class="pre">
+                        <pre>
+                            <input type="text" disabled value="<!-- Código controlado el día 12/08/2009 -->" class="form-control">
+                        </pre>
+                    </div>
+                    Esta etiqueta sirve para hacer comentarios. Todo lo escrito entre <input value="<!--" disabled style="max-width: 60px;"> 
+                    y <input disabled style="max-width: 60px;" value="-->"> es comentario, no sera representado. Este tipo de etiqueta se puede 
+                    usar en cualquier parte del codigo.
+                </li>
+                <hr>
+                <li>
+                    <pre>
+                        <input type="text" disabled class="form-control" value="<div id='bloque1'>Contenido del bloque1</div>">
+                    </pre>
+                    Las etiquetas <input value="<div>" disabled style="max-width: 60px;"> y <input value="</div>" disabled style="max-width: 60px;"> 
+                    sirven para dividir secciones de codigo. No requiere ningun atributo pero soporta:
+                    <ul>
+                        <li>id: sirve para identificar el elemento</li>
+                        <li>class: asigna una clase al elemento</li>
+                        <li>style: permite definir el estilo del elemento</li>
+                    </ul>
+                </li>
+                <hr>
+            </ol>
+            </li>
+        </ol>
+    </p>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
