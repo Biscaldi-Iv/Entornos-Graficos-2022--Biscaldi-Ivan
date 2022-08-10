@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencias entre codigos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <ol start="3">
+        <li>
+            <ol type="a">
+                <li>
+                    <pre>
+                        <textarea disabled class="form-control" rows="7">
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+<a href="#">Click aquí para ir a Google</a>
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+                        </textarea>
+                    </pre>
+                    El primer hipervinculo dirige a la pagina principal de Google en la misma pestaña.<br>
+                    El segundo tambien dirige al mismo sitio pero abriendo una nueva pestaña. Ambos se ven iguales porque 
+                    el contenido encerrado por las marcas es similar.<br>
+                    El tercer hipervinculo tambien dirige al mismo sitio pero no es visible ya que no contiene nada ni cuenta con marca de cierre.<br>
+                    El cuarto hipervinculo se visualiza como los primeros dos pero solo cambia el url actual agregando #. Esto mueve la pantalla 
+                    hasta arriba de todo .<br>
+                    El quinto elemento tiene el mismo estilo que los primeros pero texto diferente. En este caso la referencia provoca que el efecto 
+                    de hacer click desplaze la pantalla hasta donde se encuentra el elemento cuyo id es "arriba".<br>
+                    El ultimo hipervinculo no es visible porque no tiene contenido entre las marcas de apertura y cierre. Referencia a un URL relativo, 
+                    es decir a algun archivo que se encuentra en la carpeta de la pagina.
+                </li>
+                <hr>
+                <li>
+                    <pre>
+                        <textarea disabled class="form-control" rows="7">
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a
+href="http://www.google.com.ar">Click aquí</a></p>
+                        </textarea>
+                    </pre>
+                    La primera y segunda linea de codigo son parecidas, ambas contienen un hipervinculo e una imagen en un bloque de parrafo. <br>
+                    La diferencia entre estas es el orden en que aparecen la imagen y el hipervinculo.<br>
+                    El bloque de parrafo de la tercer linea(bloque 3), junto con el de la cuarta y quinta linea(bloque 4), se ven iguales. La unica 
+                    diferencia entre estos, es que en el bloque 3 hay un solo hipervinculo encerrando tanto texto como imagen y en bloque 4 un 
+                    hipervinculo encierra la imagen y otro diferente(aunque con el mismo enlace) el texto. 
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-dark">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="9">
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="9">
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="9">
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li value="3">zzz</li>
+</ol>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="9">
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-dark">
+                            <td>Este codigo genera una lista desordenada(no tiene indices) con tres items</td>
+                            <td>En el segundo caso, la lista esta ordenada, y lleva los indices por defecto(empiezan en 1) </td>
+                            <td>La tercer lista son en realidad 3 listas separadas cuyos indices iniciales fueron establecidos manualmente</td>
+                            <td>El utimo caso es una cita textual que aparenta ser una lista ordenada</td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-white">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Columna1</strong></div></td>
+<td><div align="center"><strong>Columna2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-white">
+                            <td>Este codigo define una tabla de 2 columnas con encabezado y dos filas. Se completan con datos 4 celdas. 
+                                Tiene un borde de 1 pixel para todas las lineas de la tabla y el ancho de la tabla es de 300 pixeles.
+                            </td>
+                            <td>La unica diferencia de esta tabla respecto a la anterior es que esta no tiene celdas de encabezado. Todas las 
+                                celdas de la tabla son comunes pero a las de la primera fila se les definio un estilo de forma que parecen 
+                                celdas de encabezamiento. 
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-dark">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table width="200">
+<caption>Título</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-dark">
+                            <td>Define una tabla con de 200 pixeles de ancho con titulo, 3 columnas por 2 filas, 
+                            donde las 6 celdas estan en blanco, y el color de fondo de cada celda es gris.
+                            </td>
+                            <td>Esta tabla de 200 pixeles de ancho, sin titulo, tiene 3 filas por 3 columnas. 
+                            La primer fila tiene una celda que abarca 3 columnas y el texto tiene alineacion al centro. 
+                            Las 6 celdas restantes de las otras filas tienen color de fondo gris y estan vacias. 
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-white">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-white">
+                            <td colspan="2">La unica diferencia entre las dos tablas, es que en la primer tabla la 
+                                celda de la primer columna abarca 2 filas. En cambio en la segunda tabla, la celda de 
+                                la primer fila abarca 2 columnas.
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-dark">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table width="200" border="1">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control" rows="7">
+<table width="200" border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-dark">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
