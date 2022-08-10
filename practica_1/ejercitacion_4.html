@@ -1,9 +1,12 @@
+<a href="https://www.frro.utn.edu.ar"><img src="./ejemplo_3_files/logoutnwhite.png"  alt="Universidad Tecnologica Nacional"
+style="background-color:black;" width="15%" height="10%" ></a>
 <hr>
-<h2>Año 2008</h2>
+<h1>Año 2008</h1>
 <table border="1">
+    <caption hidden>Exámenes</caption>
     <th colspan="2">Exámenes</th>
     <tr>
-        <th rowspan="2">Fecha:</th>
+        <th rowspan="2" id="fechas"></th>
         <td>Aprobados</td>
     </tr>
     <tr>
@@ -14,16 +17,14 @@
     <!--enlaces-->
     <ol>
         <li>
-            <a href="">Enunciado del examen</a>
+            <a href="#enunciado">Enunciado del examen</a>
         </li>
-    </ol>
-    <ol>
         <li>
-            <a href="">Resolucion</a>
+            <a href="" target="_blank">Resolucion</a>
         </li>
     </ol>
 </div>
-<form>
+<form action="mailto:xx@xx.com" enctype=text/plain method="post" target="_blank">
     <p>Puede realizar consultas completando el siguiente formulario:</p>
     <label for="mail">e-mail</label>
     <input type="text" id="mail">
@@ -34,9 +35,20 @@
     <button type="submit">Enviar</button>
     <button type="reset">Borrar</button>
 </form>
-
-<h2>Enunciado del examen</h2>
-<p>Ejercicio 1:</p>
-<p>Ejercicio 2:</p>
-
+<div id="enunciado">
+    <h2>Enunciado del examen</h2>
+    <p>Ejercicio 1:.................</p>
+    <p>Ejercicio 2:.................</p>
+</div>
 Para mas informacion dirijase a <a>contacto@xx.com</a>
+
+<script type="text/javascript">
+    function init(){
+        let fecha= new Date(Date.parse(document.lastModified));
+        let el=document.getElementById("fechas");
+        let txt=document.createTextNode("Fecha:"+fecha.getDay()+"/"+fecha.getMonth()+"/"+fecha.getFullYear());
+        el.appendChild(txt);
+        return;
+    }
+    init();  
+</script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercitacion 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <p class="h1 text-center">Cuestionario</p>
+    <div>
+        <p class="h2">¿Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?</p>
+        <hr>
+        <p class="p">HTML(HiperText Markup Language) es un lenguaje de marcado con hipertexto adoptado como lenguaje
+            de publicacion de la World Wide Web Consortium (W3C). HTML es un estandar que define una estructura basica 
+            y codigo(codigo HTML) para la definicion de contenido de una pagina web.
+            W3C es una organizacion dedicada a la estandarizacion de tecnologias que se relacionen con la web. 
+            HTML ha tenido diferentes versiones:
+            <ol>
+                <li><strong>HTML 2.0</strong>: En 1995 se publica el estándar HTML 2.0. A pesar de su nombre, HTML 2.0
+                     es el primer estándar oficial de HTML. No soportaba tablas. Se simplificaba al máximo la estructura 
+                     del documento para agilizar su edición, la declaración explícita de los elementos body, html y head era opcional.
+                </li>
+                <li><strong>HTML 3.2</strong>:se publicó en 1997 y es la primera recomendación de HTML publicada por el W3C. 
+                    Incorporó los últimos avances de las páginas web desarrolladas hasta 1996, como applets de Java y texto 
+                    que fluye alrededor de las imágenes</li>
+                <li><strong>HTML 4.01</strong>: se publicó en diciembre de 1999 e iba a ser la ultima publicacion oficial de HTML. 
+                    Desde la publicación de HTML 4.01, el W3C se centró en el desarrollo del estándar XHTML. Por este motivo, 
+                    en el año 2004, las empresas Apple, Mozilla y Opera mostraron su preocupación por la falta de interés del 
+                    W3C en HTML y decidieron organizarse en una nueva asociación llamada WHATWG (Web Hypertext Application Technology 
+                    Working Group) que comenzó el desarrollo del HTML 5</li>
+                <li><strong> HTML 5, 5.1 y 5.2</strong>: el WHATWG publico borradores de HTML 5.0 en marzo de 2007 y esto impulso 
+                a W3C a continuar estandarizando HTML, de hecho decidio integrar XHTML. Tras una larga evolucion, en octubre de 2014 
+                W3C libera el estandar HTML 5, el cual incorporaba nuevos elementos, etiquetas y la posibilidad de introducir 
+                audio y video sin necesidad de plugins o complementos de navegadores</li>
+            </ol>
+            HTML 5 es la revision mas reciente, entre las mas importantes, del lenguaje. Ha definido criterios de conformidad para todos los 
+            agentes de usuarios(navegadores) e intenta mejorar la habilidad de diferentes sistemas para intercambiar informacion.
+        </p>
+    </div>
+    <div>
+        <p class="h2">¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?</p>
+        <hr>
+        <p class="p">
+            <strong>Separar estructura y presentacion:</strong> Dado que a medida que evoluciona HTML pueden verse reemplazados sus 
+            elementos y atributos de presentacion por otros, resulta conveniente que la estructura sea independiente de la presentacion.
+            Ademas esto permite que una misma pagina sirva para diferentes plataformas.<br>
+            <strong>Considerar la accesibilidad universal:</strong> los autores deberia considerar como representar sus documentos 
+            en diferentes plataformas(navegadores basados en voz, lectores braille, etc) para que la web pueda ser mas accesible 
+            para todos (como por ejemplo personas con discapacidades). Ademas es posible que algunos sitios cuenten con audiencias 
+            muy lejanas que tengan computadoras y configuraciones muy diferentes, y para ellos seria conveniente que los documentos 
+            puedan internacionalizarse. <br>
+            <strong>Ayudar con la representacion incremental:</strong> usando tablas y/o otras nuevas caracteristicas incrementales 
+            es posible ayudar a los navegadores a representar los documentos mas rapido. 
+        </p>
+    </div>
+    <div>
+        <p class="h2">En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?</p>
+        <hr>
+        <p class="p">
+            Se considera <strong>desaprobado</strong> a todo elemento o atributo que resulte anticuado por la existencia de nuevas 
+            estructuras. Estos deberian continuar teniendo soporte por parte de los navegadores pero en un futuro dejaran de tenerla. 
+            <br>
+            Se considera <strong>obsoleto</strong> a todo elemento o atributo que ya no tiene garantia de soporte por parte de un 
+            navegador. Un elemento o atributo obsoleto a la vez, es aquel que ya no es definido especificaciones de HTML(a excepcion 
+            de que se lo nombre por cuestiones historicas).
+        </p>
+    </div>
+    <div>
+        <p class="h2">¿Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?</p>
+        <hr>
+        <p class="p">
+            El DTD es la declaración del tipo de documento(<strong>d</strong>ocument <strong>t</strong>ype 
+            <strong>d</strong>eclaration). Este indica que version de HTML utiliza el documento.
+            <br>
+            Los DTD especificados por HTML 4.01 son:
+            <ul>
+                <li>
+                    <strong>Strict DTD</strong>(DTD estricto): incluye a todos los atributos y elementos que no fueron desaprobados 
+                    o que no aparecen en documentos con marcos.
+                </li>
+                <li>
+                    <strong>Transitional DTD</strong>(DTD transicional): similar al DTD estricto pero tambien incluye elementos y 
+                    atributos desaprobados.
+                </li>
+                <li>
+                    <strong>Frameset DTD</strong>(DTD con marcos): incluye los elementos y atributos del DTD transicional y tambien 
+                    los marcos.
+                </li>
+            </ul>
+        </p>
+    </div>
+    <div>
+        <p class="h2">¿Qué son los metadatos y cómo se especifican en HTML?</p>
+        <hr>
+        <p class="p">
+            Los metadatos son informacion acerca del documento. Indican sus propiedades(autor, fecha de caducidad, palabras claves, etc). 
+            Entre otros permite establecer el idioma, de forma que los sintetizadores de voz puedan usar reglas de pronunciacion 
+            que son dependientes del idioma. <br>
+            Los metadatos se especifican utilizando la etiqueta <span class="badge bg-primary">meta</span>:<br>
+            <div class="pre">
+                <pre>
+                    <code>
+                        <textarea disabled class="form-control" rows="3" style="resize:none;">
+                        <meta lang="es" name="author" content="Ivan Biscaldi">
+                        <meta lang="es" name="keywords" content="lenguaje, marcado, hipertexto">
+                        <meta lang="en" name="keywords" content="language, markup, hipertext">
+                        </textarea>
+                    </code>
+                </pre>
+            </div>
+
+        </p>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
