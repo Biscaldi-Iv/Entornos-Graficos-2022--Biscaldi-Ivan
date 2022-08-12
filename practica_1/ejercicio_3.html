@@ -318,8 +318,178 @@ href="http://www.google.com.ar">Click aquí</a></p>
                             </th>
                         </tr>
                         <tr class="table-dark">
-                            <td></td>
-                            <td></td>
+                            <td>La primer tabla tiene 3 filas y 3 columnas, toda la fila uno es cubierta por una unica celda. 
+                                Luego una celda cubre las 4 intersecciones entre fila 2 y 3 con columnas 1 y 2, dejando separadas las celdas de la utlima 
+                                columna que intersectan con filas 2 y 3. El redimensionamiento(ancho 50%) de la celda de fila 2 y columna 3
+                                provoca que parezca que hay solo 2 columnas al estar unidas las columnas restantes. 
+                            </td>
+                            <td>
+                                En la segunda tabla en cambio si hay solamente 2 columnas y 3 filas. En la columna 1 las filas estan unidas, lo que hace 
+                                que ambas tablas se vean parecidas. La otra diferencia es que se reduce a cero la distancia entre celdas, quedando la tabla 
+                                con bordes de linea simple.
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <pre>
+                        <textarea disabled class="form-control">
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+                        </textarea>
+                    </pre>
+                    Este formulario utiliza el metodo HTTP Post para enviar informacion que debe ser procesada 
+                    segun lo programado en <i>procesar.php</i>. A su vez el envio de este formulario provocara 
+                    la apertura de una nueva pestaña, la cual recibira la respuesta del sitio web.<br>
+                    Los campos de datos se ven encerrados en un cuadro que indica que esos datos forman un conjunto.<br>
+                    Para enviar el formulario hay que presionar el boton que dice "Enviar".
+                    <pre>
+                        <textarea disabled class="form-control">
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+                        </textarea>
+                    </pre>
+                    Este formulario en cambio envia los datos con el metodo HTTP Get, lo que hara que los datos 
+                    ingresados en los campos del formulario se envien en la url. En este caso los campos de datos 
+                    no estan encerrados en un cuadro. La forma de enviarlo tambien es utilizando el boton enviar, y 
+                    tambien abrira una nueva pestaña del navegador para recibir la respuesta.
+                    <pre>
+                        <textarea disabled class="form-control">
+<form id="form3" name="form3" action="mailto:xx@xx.com" enctype=text/plain method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value="Enviar" />
+</form>
+                        </textarea>
+                    </pre>
+                    Este forulario tambien esta armado para enviar un email mediante metodo HTTP Post. Tiene 
+                    apariencia similar al primero. La diferencia con este es que no hace uso de las etiquetas label, 
+                    pero no genera cambios visuales ya que no se utiliza ningun estilo en ninguno de los 2 casos. El formulario 
+                    tambien esta rodeado por un cuadro. En este caso la accion que casusa apretar el boton enviar es 
+                    que se vacie el formulario, pero no se envia. 
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-dark">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control">
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control">
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-dark">
+                            <td colspan="2">
+                                El boton 1 tiene definido un tamaño de 30 px de ancho por 20 px de alto y contiene una imagen 
+                                junto con un texto resaltado. <br>
+                                En cambio el boton 2 tiene un texto comun como atributo propio y su tamaño se adapta para mostrarlo completo.
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-white">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control">
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control">
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-white">
+                            <td colspan="2">
+                                Los radio-button de las 2 secciones se muestran de manera similar y contienen los mismos valores. 
+                                Pero tienen comportamiento diferente. Los primeros dos al tener en el atributo name el mismo nombre 
+                                funcionan en conjunto, es decir, al seleccionar uno se deselecciona el otro. En cambio los otros dos 
+                                no comparten el atributo name, por lo que seleccionar uno no altera al otro. 
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <hr>
+                <li>
+                    <table class="table">
+                        <tr class="table-white">
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control">
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+                                    </textarea>
+                                </pre>
+                            </th>
+                            <th>
+                                <pre>
+                                    <textarea disabled class="form-control">
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+                                    </textarea>
+                                </pre>
+                            </th>
+                        </tr>
+                        <tr class="table-white">
+                            <td colspan="2">
+                                Ambas listas tienen las mismas opciones y grupo de opciones. La deiferencia es que en la segunda esta 
+                                activado el atributo <i>multiple</i>. Este atributo hace que se puedan seleccionar mas de una opcion, 
+                                y ademas se mostrara la lista como una caja que admite desplazamiento en vez de mostrarse como menu desplegable 
+                                de linea simple.  
+                            </td>
                         </tr>
                     </table>
                 </li>
