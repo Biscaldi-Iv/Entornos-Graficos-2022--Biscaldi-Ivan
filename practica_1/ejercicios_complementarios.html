@@ -9,38 +9,156 @@
 
 </head>
 <body>
-    <div class="h1">Que es HTML5 y porque utilizarlo</div>
-    <div class="p">
-        HTML5 es la quinta revision mas importante del lenguaje de marcado HTML. Como novedad define criterios de conformidad para los navegadores. <br>
-        Este lenguaje utilizado principalmente para definir la estructura de las paginas web, ahora tambien permite añadir audio y video sin necesidad 
-        de utilizar plugins. La reproduccion de estos pasa a ser responsabilidad del navegado. Esto hace que se pueda reducir el tamaño del archivo 
-        de la paagina. <br>
-        Pueden añadirse videos subidos a paginas de terceros en la nueva pagina sin afectar elpeso del archivo. <br>
-        Otra novedad es la geolocalizacion. Esto permite a los sitios detectar la ubicacion de los usuarios(la utilizacion de esta caracteristica debe 
-        ser notificada a los usuarios para no violar la privacidad de ellos). <br>
-        Es posible hacer animaciones 2D mediante la etiqueta <input type="text" disabled value="<canvas>" style="max-width: 90px;"><br>
-        Tambien pueden añadirse eventos de teclado, mouse u otro mando. <br>
-        Una pagina que utiliza HTML5 es completamente accesible, se puede utilizar tanto en computadora como en dispositivos moviles.<br>
-        <div class="h2">Ventajas de HTML5</div>
-        <div class="h3">Es gratuito</div>
-        Para crear documentos HTML no se necesita ningun programa especial, puede hacerse desde cualquier editor de texto. Al guardar el 
-        documento como HTML este sera visualizable desde cualquier navegador. 
-        <div class="h3">Codigo mas ordenado</div>
-        La adicion de nuevas etiquetas ayudan a ubicar las partes de la estructura basica de toda pagina web. Es mas facil separar las etiquetas 
-        del contenido y asi los desarrolladores pueden trabajar de manera mas efectiva y detectar errores mas rapido. 
-        <div class="h3">Compatibilidad entre navegadores</div>
-        Los navegadores modernos y mas populares soportan HTML5, lo que hace posible que casi todos los usuarios puedan visualizar el contenido 
-        sin problemas. 
-        <div class="h3">Almacenamiento mejorado</div> 
-        HTML5 cuenta con almacenamiento local. Esto permite evitar cookies y tener que enviar la informacion al servidor, lo que hace que la informacion 
-        se almacene de forma mas segura.
-        <div class="h3">Diseño adaptativo</div>
-        La compatibilidad de HTML5 con navegadores de dispositivos moviles hace que tambien puedan adaptarse las paginas para que sirvan tanto a 
-        ordenadores como dispositivos moviles. Esto puede hacerse con especificaciones en el documento o utilizando frameworks.
+    <div class="container p-5 my-5 bg-primary text-white">
+        <div class="h1">Que es HTML5 y porque utilizarlo</div>
+        <div class="p">
+            HTML5 es la quinta revision mas importante del lenguaje de marcado HTML. Como novedad define criterios de conformidad para los navegadores. <br>
+            Este lenguaje utilizado principalmente para definir la estructura de las paginas web, ahora tambien permite añadir audio y video sin necesidad 
+            de utilizar plugins. La reproduccion de estos pasa a ser responsabilidad del navegador. Esto hace que se pueda reducir el tamaño del archivo 
+            de la pagina. <br>
+            Pueden añadirse videos subidos a paginas de terceros en la nueva pagina sin afectar elpeso del archivo. <br>
+            Otra novedad es la geolocalizacion. Esto permite a los sitios detectar la ubicacion de los usuarios(la utilizacion de esta caracteristica debe 
+            ser notificada a los usuarios para no violar la privacidad de ellos). <br>
+            Es posible hacer animaciones 2D mediante la etiqueta <input type="text" disabled value="<canvas>" style="max-width: 90px;"><br>
+            Tambien pueden añadirse eventos de teclado, mouse u otro mando. <br>
+            Una pagina que utiliza HTML5 es completamente accesible, se puede utilizar tanto en computadora como en dispositivos moviles.<br><br>
+            <div class="h2">Ventajas de HTML5</div>
+            <div class="container p-5 my-5 bg-white text-dark">
+                <div class="h3">Es gratuito</div>
+                Para crear documentos HTML no se necesita ningun programa especial, puede hacerse desde cualquier editor de texto. Al guardar el 
+                documento como HTML este sera visualizable desde cualquier navegador. 
+            </div>
+            <div class="container p-5 my-5 bg-white text-dark">
+                <div class="h3">Codigo mas ordenado</div>
+                La adicion de nuevas etiquetas ayudan a ubicar las partes de la estructura basica de toda pagina web. Es mas facil separar las etiquetas 
+                del contenido y asi los desarrolladores pueden trabajar de manera mas efectiva y detectar errores mas rapido. 
+            </div>
+            <div class="container p-5 my-5 bg-white text-dark">
+                <div class="h3">Compatibilidad entre navegadores</div>
+                Los navegadores modernos y mas populares soportan HTML5, lo que hace posible que casi todos los usuarios puedan visualizar el contenido 
+                sin problemas.
+            </div> 
+            <div class="container p-5 my-5 bg-white text-dark">
+                <div class="h3">Almacenamiento mejorado</div> 
+                HTML5 cuenta con almacenamiento local. Esto permite evitar cookies y tener que enviar la informacion al servidor, lo que hace que la informacion 
+                se almacene de forma mas segura.
+            </div>
+            <div class="container p-5 my-5 bg-white text-dark">
+                <div class="h3">Diseño adaptativo</div>
+                La compatibilidad de HTML5 con navegadores de dispositivos moviles hace que tambien puedan adaptarse las paginas para que sirvan tanto a 
+                ordenadores como dispositivos moviles. Esto puede hacerse con especificaciones en el documento o utilizando frameworks.
+            </div>
+        </div>
     </div>
-    <div class="h1">Formatos de audio</div>
-    <div class="p">
-        El comite de estandarizacion W3C deja a decision de los desarrolladores de navegadores que formatos de audio soportan.
+    <hr>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <div class="h1">Formatos de audio</div>
+        <div class="p">
+            Los elementos de audio se indican con las etiquetas <input type="text" disabled value="<audio></audio>" style="max-width:140px;">.<br>
+            El comite de estandarizacion W3C deja a decision de los desarrolladores de navegadores que formatos de audio deben soportar los navegadores. 
+            Los formatos mas comunes son: <strong>.wav, .ogg, .au</strong> y <strong>.mp3</strong><br><br>
+            Dado que se desconoce que formatos de audio soporta el navegador de cada usuario es posible definir mas de un recurso para un elemento de audio. 
+            Para ello se utiliza la etiqueta <input type="text" disabled value="<source>" style="max-width: 80px;"> por cada recurso que se proporcione. El 
+            navegador reproducira el primer recurso que soporte. <br><br>
+            <div class="h3">Elemento audio: ejemplo</div>
+            <pre>
+                <textarea disabled class="form-control">
+<audio controls preload="none">
+    <source src="http://ubuntu.hbr1.com:19800/ambient.ogg" type="audio/ogg">
+</audio>
+                </textarea>
+            </pre>
+            <audio controls preload="none">
+                <source src="http://ubuntu.hbr1.com:19800/ambient.ogg" type="audio/ogg">
+            </audio>
+        </div>
+    </div>
+    <hr>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <div class="h1">Formatos de video</div>
+        <div class="p">
+            Los elementos de video se indican con las etiquetas <input type="text" disabled value="<video></video>" style="max-width:140px;">.<br>
+            Casi todos los navegadores soportan el formato <strong>.mp4</strong>, y la mayoria tambien soportan <strong>.ogg</strong> y <strong>.webm</strong> .
+            <br><br>
+            Al igual que con los elementos de audio, es posible asignar mas de un recurso al mismo elemeto video y esto tambien se hace con la 
+            etiqueta <input type="text" disabled value="<source>" style="max-width: 80px;">. <br><br>
+            <div class="h3">Elemento video: ejemplo</div>
+            <pre>
+                <textarea disabled class="form-control">
+<video controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+    Tu navegador no soporta la etiqueta video
+</video>
+                </textarea>
+            </pre>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                Tu navegador no soporta la etiqueta video
+            </video>
+            <div class="h3">Insertar un video de otro sitio: ejemplo</div>
+            <pre>
+                <textarea disabled class="form-control">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vJB8NCxcWe8" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+                </textarea>
+            </pre>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vJB8NCxcWe8" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <hr>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <div class="h1">Formularios</div>
+        <div class="container p-5 my-5 bg-white text-dark">
+            <form>
+                <fieldset>
+                    <legend>Formulario con un campo requerido</legend>
+                    <input type="text" required id="campo_req">
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container p-5 my-5 bg-white text-dark">
+            <form>
+                <fieldset>
+                    <legend>Formulario con campo de tipo mail validado</legend>
+                    <input type="email" required id="correo">
+                    <button type="sumbit">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container p-5 my-5 bg-white text-dark">
+            <form>
+                <fieldset>
+                    <legend>Formulario con campo de tipo fecha validado</legend>
+                    <input type="date" required id="fecha">
+                    <button type="sumbit">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container p-5 my-5 bg-white text-dark">
+            <form>
+                <fieldset>
+                    <legend>Formulario con campo de tipo color validado</legend>
+                    <input type="color" required id="fecha">
+                    <button type="sumbit">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+                <div class="container p-5 my-5 bg-white text-dark">
+            <form>
+                <fieldset>
+                    <legend>Formulario con campo de tipo number validado</legend>
+                    Minimo: 5<br>
+                    Maximo: 25<br>
+                    <input type="number" min="5" max="25" required>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
