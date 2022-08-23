@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta lang="es" name="author" content="Ivan Biscaldi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1- CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>¿Qué es CSS y para qué se usa?</h1>
+        <p>
+            Las hojas de estilo en cascada o <i>'Cascading Style Sheets' (CSS)</i> son documentos que permiten especificar la forma 
+            de representar un documento de HTML. De esta forma se puede separar a la información del diseño/formato. <br><br>
+            Las hojas de estilo se utilizan para controlar la apariencia de una pagina web, permiten describir la forma que se 
+            presentan los elementos de una pagina. <br><br>
+            Con CSS se puede especificar el color, tamaño, fuente, espacio entre elementos, recuadros y ubicacion de elementos. <br><br>
+            El lenguaje de las Hojas de Estilo está definido en la Especificaciones CSS1, CSS2 y
+            CSS3 del W3C y es un estandard de la web.
+        </p>
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?</h1>
+        <p>
+            Las hojas de estilo se componene de reglas aplicadas a documentos HTML o XML. <br>
+            Las reglas se contienen dos partes: <b>selector y declaracion</b>, y a su vez, la declaracion 
+            se compone de propiedades y los valores que se le asignan. <br>
+            El selector especifica que partes del documento o elementos se ven afectados por la declaracion.<br>
+            La declaracion establece cual es el efecto a producir.<br> 
+        </p>
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>¿Cuáles son las tres formas de dar estilo a un documento?</h1>
+        <p>
+            Se puede declarar el estilo de un documento mediante:
+            <ul>
+                <li>el uso del atributo <i>style</i> en cada elemento del documento al que se le quiera dar un estilo</li>
+                <li>la declaracion de estilos en el encabezado( <i>head</i> ) de la pagina</li>
+                <li>la declaracion de estilos en un archivo independiente con extencion <b>.css</b></li>
+            </ul>
+        </p>
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>¿Cuáles son los distintos tipos de selectores más utilizados?</h1>
+        <h2>Ejemplifique cada uno.</h2>
+        <p>
+            Los selectores se pueden clasificar en:
+            <div>
+                <div class="container p-5 my-5 bg-white text-dark">
+                    <h3>Selectores simples:</h3> 
+                    Seleccionan los elementos basados en su <i>id</i>, nombre (<i>name</i>), clase (<i>class</i>) o tipo de elemento. <br>
+                    Ej: <br>
+                    <code>
+                        div { propiedad: valor; } /* Afecta a todos los elementos div */<br>
+                        #elem { propiedad: valor; } /* Afecta al elemento con id elem */<br>
+                        .clase1 { propiedad: valor; } /* Afecta a los elementos de clase "clase1" */<br>
+                        p.clase2 { propiedad: valor; } /* Afecta a los elementos p de clase "clase2" */<br>
+                        * { propiedad: valor; } /*Afecta a todo el documento */
+                    </code>
+                </div>
+                <div class="container p-5 my-5 bg-white text-dark">
+                    <h3>Selectores combinadores:</h3> 
+                    Selecciona elementos basados en la relacion con otros elementos
+                    <div>
+                        <h5>Selectores de descendientes:</h5> 
+                        Se seleccionan a los elementos especificados que estan contenidos por sus predecesores 
+                        (el selector se escribe separado por espacio). <br>Ej:<br>
+                        <code>
+                            div p { propiedad: valor; } /* solo afectara a los elementos p contenidos por elementos div */
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selectores de hijos:</h5> 
+                        Se seleccionan a los elementos especificados que son hijos de un elemento especificado <br>Ej:<br>
+                        <code>
+                            div > p { propiedad: valor; } /* solo afectara a los elementos p que son hijos de elementos div */
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selectores de hermanos adyacentes:</h5>
+                        Se seleccionan los elementos que estan inmediatamente luego de determinado elemento <br>Ej: <br>
+                        <code>
+                            div + p { propiedad: valor; } /* afecta a cada elemento p que se encuentre inmediatamente luego de un elemento div */
+                        </code>
+                    </div>
+                    <div>
+                        <h5>Selectores generales de hermanos:</h5>
+                        Se seleccionan los elementos que estan luego de determinado elemento hermano <br>Ej:<br>
+                        <code>
+                            div ~ p { propiedad: valor; } /* afecta a cada elemento p que se encuentre luego de un elemento div y ademas tengan un padre en comun */
+                        </code>
+                    </div>
+                </div>
+                <div class="container p-5 my-5 bg-white text-dark">
+                    <h3>Selectores de pseudoclases:</h3>
+                    Las pseudoclases se usan para definir un estado especial de un elemento. Por ejemplo un elemento sobre el cual pasa el mouse 
+                    o un link que fue o no visitado:<br>
+                    <code>
+                        /* link no visitado */<br>
+                        a:link {<br>
+                        color: #FF0000;<br>
+                        }<br>
+
+                        /* link visitado */<br>
+                        a:visited {<br>
+                        color: #00FF00;<br>
+                        }<br>
+                    </code>
+                </div>
+                <div class="container p-5 my-5 bg-white text-dark">
+                    <h3>Selectores de pseudoelementos:</h3>
+                    Un pseudoelemento es una parte de un elemento. Las posibles partes de un elemento pueden ser la primera letra, la primer linea, 
+                    los marcadores de una lista, la parte seleccionada por un usuario con el mouse, y la parte anterior o posterior de un elemento. <br>
+                    Ej:<br>
+                    <code>
+                        p::first-letter {
+                        color: #ff0000;
+                        font-size: xx-large;
+                        }  /* modifica el color y tamaño de la primera letra de cada elemento p */                      
+                    </code>
+                </div>
+            </div>
+        </p>
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>¿Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?</h1><!-- respondido anteriormente -->
+        Como se menciono anteriormente, una pseudo-clase es un elemento que tiene un estado especial. 
+        Las pseudoclases mas aplicadas a vinculos son:
+        <ul>
+            <li>Vinculos visitados -> <b>a:visited</b></li>
+            <li>Vinculos no visitados -> <b>a:link</b></li>
+            <li>Vinculos seleccionados -> <b>a:active</b></li>
+            <li>Vinculo que tiene el mouse encima -> <b>a:hover</b></li>
+        </ul>
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>¿Qué es la herencia?</h1><!--en apunte-->
+        La herencia en CSS es el mecanismo mediante el cual determinadas propiedades de un elemento padre se transmiten a sus hijos.
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>¿En qué consiste el proceso denominado cascada?</h1><!--en apunte-->
+        Las hojas de estilo son en cascada en cuanto a que el formato/estilo final de cada elemento depende de todas las propiedades que le afectan, es decir, 
+        no solo las especificadas para ese elemento, si no tambien la de los elementos que lo contienen. Un elemento puede encontrar en hojas de estilo 
+        mas de una declaracion acerca de una determinada propiedad, la declaracion que definira a esa propiedad del elemento siempre sera la ultima. 
+    </div>
+</body>
+</html>
