@@ -123,6 +123,101 @@
                         }  /* modifica el color y tamaño de la primera letra de cada elemento p */                      
                     </code>
                 </div>
+                <div class="container p-5 my-5 bg-white text-dark">
+                    <h3>Selectores de atributos</h3>
+                    Se pueden seleccionar elementos que tienen atributos especificos. Existen diferentes formas de seleccioonar atributos:
+                    <div>
+                        <h5>Selector de atributo</h5>
+                        Selecciona los elementos que tengan el atributo especifico<br>
+                        Ej:<br>
+                        <code>
+                            /*Afecta a todos los links con atributo target*/<br>
+                            a[target] {<br>
+                            background-color: yellow; <br>
+                            }
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selector [atributo="valor"]</h5>
+                        Selecciona los elementos con un atributo y su valor especificado<br>
+                        Ej:<br>
+                        <code>
+                            /*Afecta los link cuyo target sea igual a "_blank"*/<br>
+                            a[target="_blank"] {<br>
+                            background-color: yellow;<br>
+                            }
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selector [atributo~="valor"]</h5>
+                        Selecciona a los elementos con cierto atributo si este en su valor contiene cierta palabra separada por espacios<br>
+                        Ej:<br>
+                        <code>
+                            /*Afecta a los elementos cuyo atributo title contenga la palablra 'flower'*/<br>
+                            [title~="flower"] {<br>
+                            border: 5px solid yellow;<br>
+                            }
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selector [atributo|="valor"]</h5>
+                        Selecciona elementos con cierto atributo si este tiene el valor especificado o el valor especificado seguido por un guion("-")<br>
+                        La palabra/valor especificados debe estar completa<br>
+                        Ej:<br>
+                        <code>
+                            /*Selecciona todos los elementos de clase "top". ademas selecciona por ejemplo elementos donde class="top-text" <br>
+                            pero no seleccionara elementos cuya clase sea por ejemplo "top1"*/<br>
+                            [class|="top"] {<br>
+                            background: yellow;<br>
+                            }
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selector [atributo^="valor"]</h5>
+                        Selecciona elementos con cierto atributo si este en tiene un valor que comienza con la secuencia de caracteres especificada<br>
+                        En este caso no es necesario utilizar la palabra completa<br>
+                        Ej:<br>
+                        <code>
+                            /*Seleccionara todos los elementos que en la especificacion de clase contengan la cadena "top", <br>
+                            es decir, tanto class="top" como class="top1" seran seleccionados */<br>
+                            [class^="top"] {<br>
+                            background: yellow;<br>
+                            }
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selector [atributo$="valor"]</h5>
+                        Selecciona elementos con cierto atributo si este en tiene un valor que termina con la secuencia de caracteres especificada<br>
+                        En este caso no es necesario utilizar la palabra completa<br>
+                        Ej:<br>
+                        <code>
+                            /*Selecciona todos los elementos que tengan una clase de terminacion "test". <br>
+                            Por ejemplo tanto class="redtest" como class="bluetest" seran seleccionados*/ <br>
+                            [class$="test"] {<br>
+                            background: yellow;<br>
+                            }
+                        </code>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5>Selector [atributo*="valor"]</h5>
+                        Selecciona elementos con cierto atributo si este en tiene un valor que contiene la secuencia de caracteres especificada<br>
+                        En este caso no es necesario utilizar la palabra completa<br>
+                        Ej:<br>
+                        <code>
+                            /*Selecciona todos los elementos cuya clase en alguna parte tenga la cadena "te"*/<br>
+                            /*Por ejemplo class="tomate" y class="eterno" seran seleccionados*/<br>
+                            [class*="te"] {<br>
+                            background: yellow;<br>
+                            }
+                        </code>
+                    </div>
+                </div>
             </div>
         </p>
     </div>
