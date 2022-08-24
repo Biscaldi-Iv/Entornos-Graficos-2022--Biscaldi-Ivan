@@ -39,12 +39,12 @@ h1[title] {
 
 /*6. El color de los enlaces en las listas ordenadas debe ser azul para los enlaces aún no visitados, y violeta
 para los ya visitados y, además, no deben aparecer subrayados.*/
-ul a:active{
+ol a:active{
     color:blue;
 }
-ul a:visited{
+ol a:visited{
     color:violet;
 }
-ul a{
+ol a{
     text-decoration:none;
 }
