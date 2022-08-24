@@ -1,0 +1,30 @@
+<style>
+p.quitar {          /*Afecta a los elementos p de clase='quitar'*/
+color: red;       /*El color del texto del elemento sera rojo*/
+}
+*.desarrollo {      /*Afecta a todos los elementos de clase='desarrollo'*/
+font-size: 8px;     /*El tamaño de las letras sera de 8 pixeles*/
+}
+.importante {       /*Afecta a todos los elementos de clase='importante'*/
+font-size: 20px;    /*El tamaño de las letras sera de 20 pixeles*/
+}
+</style>
+<p class="desarrollo"><!--Recibe el efecto especificado para la clase 'desarrollo'-->
+    En este primer párrafo trataremos lo siguiente:
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="quitar"><!--Recibe el efecto especificado para elementos p de clase 'quitar'-->
+    Este párrafo debe ser quitado de la obra…
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p>
+    En este otro párrafo trataremos otro tema:<br />
+    xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="importante"><!--Recibe el efecto especificado para elementos de clase 'importante'-->
+    Y este es el párrafo más importante de la obra…
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1><!--el estilo no afecta elementos h1 porque no hay niguna declaracion para ellos-->
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p><!--dado que las declaraciones de las clases no referencian a las mismas propiedades
+el efecto especificado por ambas clases afectara a este elemento-->
