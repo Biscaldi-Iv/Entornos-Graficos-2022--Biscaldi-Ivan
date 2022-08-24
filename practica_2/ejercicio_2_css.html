@@ -1,0 +1,24 @@
+<style>
+p#normal {                      /*Afectara al elemento p de id='normal' */
+font-family: arial,helvetica;   /*La fuente del texto sera arial si esta disponible, o helvetica, y si tampoco esta disponible*/
+font-size: 11px;                /*sera el navegador usara una de la familia Sans-serif. El tamaño de la letra sera de 11 pixeles*/
+font-weight: bold;              /*y las letras se mostraran el negrita*/
+}
+*#destacado {                   /*Afecta al elemento de id='destacado'*/
+border-style: solid;            /*Sera rodeado por un borde continuo, */
+border-color: blue;           /*de color azul,*/
+border-width: 2px;              /*y el borde tendra 2 pixeles de ancho*/
+}
+#distinto {                     /*Afecta al elemento de id='distinto'*/
+background-color: #9EC7EB;    /*La visualizacion del elemento sera sobre un fondo celeste claro,*/
+color: red;                   /*y el texto del elemento es rojo*/
+}
+</style>
+<p id="normal">Este es un párrafo</p>   
+<p id="destacado">Este es otro párrafo</p><!--Dado que no se establecieron reglas respecto al ancho y relleno el borde rodeara toda la linea-->
+<table id="destacado"><!--En este caso no pasa lo mismo que con el anterior elemento porque las tablas tienen bordes definidos-->
+    <tr>
+        <td>Esta es una tabla</td>
+    </tr>
+</table>
+<p id="distinto">Este es el último párrafo</p><!--Dado que no se establecieron reglas respecto al ancho y relleno fondo estara en toda la linea-->
