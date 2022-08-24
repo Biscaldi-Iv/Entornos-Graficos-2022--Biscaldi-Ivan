@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <iframe id="codigo_1" title="codigo_1" src="codigo_1.html" width="45%" height="40%"></iframe>
+    <iframe id="codigo_2" title="codigo_2" src="codigo_2.html" width="45%" height="40%"></iframe>
+
+    <textarea rows="14" id="cod_1" style="resize:none; width:45%;" disabled>
+<body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un
+enlace</a></td>
+</tr>
+</table>
+</body>
+    </textarea> 
+
+    <textarea rows="14" id="cod_2" style="resize:none; width:45%" disabled>
+<body class="contenido">
+<p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con
+un enlace</a></td>
+</tr>
+</table>
+</body>
+    </textarea>
+    <p>
+        En el segundo documento, la clase de body es "contenido" por lo que todo texto 
+        dentro del cuerpo esta en negrita y el tamaño sera de 14 pixeles a menos que 
+        en los elementos internos se indique lo contrario. Por ejemplo el elemento p 
+        tiene otro tamaño(10 px) definido.<br> <br>
+        En ambos documentos la primer fila de la tabla tiene color verde al ser esto 
+        lo definido para todo el documento, y no encontrarse otra declaracion que 
+        especifique lo contrario.<br> <br>
+        En el primer documento si bien el elemento inicial es un parrafo no se 
+        aprecia el efecto definido para elementos p porque posteriormente esta 
+        definida la clase "contenido" la cual modifica el tamaño, y en el elemento 
+        se establece que el grueso del texto debe ser normal. 
+    </p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/*Ivan Biscaldi*/
+
+* {color:green; } /*El texto de todos los elementos del documento sera de color verde*/
+a:link {color:gray } /*Los links no visitados se veran en gris*/
+a:visited{color:blue } /*Los links visitados se veran azul*/
+a:hover {color:fuchsia }/*Al posicionar el mouse sobre un link este se vera en rosa*/
+a:active {color:red }/*Al hacer click sobre un link, este se vera color rojo*/
+p {font-family: arial,helvetica;font-size: 10px;color:black; }/*El texto de los elementos p tendran fuente arial, helvetica o sans-serif
+las letrans tendran 10 pixeles de tamaño y tendran color negro*/
+.contenido{font-size: 14px;font-weight: bold; }/*el texto de los elementos de clase contenido estaran en negrita y el tamaño
+de sus letras sera de 14 pixeles*/
