@@ -1,4 +1,5 @@
 <?php
+/* AUTOR: IVAN BISCALDI */
 /* funcion doble */
 function doble($i) { /* parametro: i */
  return $i*2;
