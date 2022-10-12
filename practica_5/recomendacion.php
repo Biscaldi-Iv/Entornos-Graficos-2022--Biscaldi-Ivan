@@ -29,7 +29,7 @@
                 <label for="message" class="form-label">Mensaje</label>
                 <textarea class="form-control" rows="3" id="message" name="message" readonly>
                 Hola amigo/a, <br>    
-                Te recomiendo visitar <?php echo $_SERVER[‘HTTP_HOST’]; ?>
+                Te recomiendo visitar <?php echo $_SERVER['HTTP_HOST']; ?>
                 </textarea>
             </div>
             <div class="mb-3">
