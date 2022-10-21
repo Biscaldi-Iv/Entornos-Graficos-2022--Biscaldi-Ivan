@@ -3,4 +3,6 @@
 * Practica 1: HTML
 * Practica 2: CSS 
 * Practica 3: Bootstrap
-* Practica 4: PHP
+* Practica 4: PHP Basico
+* Practica 5: PHP + email
+* Practica 6: PHP + Base de datos

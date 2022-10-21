@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta lang="es" name="author" content="Ivan Biscaldi">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Conexion a base de datos con PHP</h1>
+        <p>
+            Consulta a una base de datos: Para comenzar la comunicación con un servidor de base de datos MySQL, es
+            necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función 
+            <code>mysqli_connect($hostname , $nombreUsuario , $contraseña, $base_datos, $puerto, $socket);</code><br>
+            Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios:
+            <ul>
+                <li>$hostname</li>
+                <li>$nombreUsuario</li>
+                <li>$contraseña</li>
+            </ul>
+            Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función 
+            <code>mysqli_select_db($mysql, $database)</code> .
+            Esta función debe pasar como parámetro:
+            <ul>
+                <li><code>$mysql</code>: conexión con el servidor de base de datos</li>
+                <li><code>$database</code>: string con el nombre de la base de datos</li>
+            </ul>
+            La función <code>mysqli_query()</code> se utiliza para ejecutar consultas en la base de datos 
+            y requiere como parámetros: 
+            <ul>
+                <li><code>$mysql</code>: conexion a la base de datos</li>
+                <li><code>$query</code>: string de consulta</li>
+            </ul>
+            La cláusula or die() se utiliza para imprimir un mensaje y terminar la ejecucion de un script en caso de error,
+            y la función <code>mysqli_error()</code> se puede usar para obtener el mensaje de error que pudiera haber producido
+            la ultima llamada a una función de MySqli.<br><br>
+            Si la función <code>mysqli_query()</code> es exitosa, el conjunto resultante retornado se almacena en una variable, por ejemplo
+            <code>$vResult</code>, y a continuación se puede ejecutar el siguiente código:<br>
+            <div class="row">
+                <div class="col-6">
+                    <textarea disabled class="form-control" rows="14">
+<?php
+while ($fila = mysqli_fetch_array($vResultado))
+{
+?>
+<tr>
+<td><?php echo ($fila[0]); ?></td>
+<td><?php echo ($fila[1]); ?></td>
+<td><?php echo ($fila[2]); ?></td>
+</tr>
+<?php
+}
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+                    </textarea>
+                </div>
+                <div class="col-6">
+                    <br>
+                    Para cada fila obtenida de la consulta a la base de datos se añadira una 
+                    fila a una tabla en el documento. En las primeras tres celdas de cada fila 
+                    se vera información obtenida de la base de datos.
+                </div>
+            </div>
+        </p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
