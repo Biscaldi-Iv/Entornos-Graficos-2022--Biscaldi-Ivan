@@ -35,7 +35,7 @@ function editar(mysqli $conn, Ciudad $city){
     " habitantes=$city->habitantes, superficie=$city->superficie, tienemetro=$city->metro".
     " WHERE id = $city->id";
     if ($conn->query($sql) === TRUE) {
-        echo "Registro actualizado!";
+        echo "Registro actualizado! ($city->id)";
     } else {
         echo "Error al actualizar registro: " . $conn->error;
     }
@@ -46,7 +46,7 @@ function editar(mysqli $conn, Ciudad $city){
 function eliminar(mysqli $conn, Ciudad $city){
     $sql="DELETE FROM ciudades WHERE id = $city->id";
     if ($conn->query($sql) === TRUE) {
-        echo "Ciudad eliminada!";
+        echo "Ciudad eliminada! ($city->id)";
     } else {
         echo "Error al eliminar la ciudad: " . $conn->error;
     }
