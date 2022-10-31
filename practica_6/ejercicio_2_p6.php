@@ -11,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="modal_helper.js">
 </head>
 <body>
     <div class="container">
@@ -19,7 +18,7 @@
         include 'funciones.php';
         $servername = "localhost";
         $username = "root";
-        $password = "42330102";
+        $password = "12345";
         $database="php_data";
         $conn = new mysqli($servername, $username, $password, $database);
         if($conn->connect_error){
@@ -31,11 +30,13 @@
         } else { 
             if(isset($_POST['formId1'])){
                 $id = $_POST['formId1'];
+                if($id<=0) { $id=0; }
                 $nom_c=$_POST['ciudad'];
                 $pais=$_POST['pais'];
                 $habitantes=$_POST['habitantes'];
                 $superficie=$_POST['superficie'];
                 $tiene_m=$_POST['metro'];
+                if(is_null($tiene_m)){ $tiene_m=0; }
                 $ciudad=new Ciudad($id,$nom_c,$pais, $habitantes, $superficie, $tiene_m);
                 $accion=$_POST['accion'];
                 echo '<div class="alert alert-info" role="alert"><p class="mb-0">';
@@ -60,11 +61,12 @@
             $result = $conn->query($sql);
         ?>
         <div class="row">
-            <button type="button" class="btn btn-success">Registrar ciudad</button>
+            <button type="button" class="btn btn-success" data-bs-target="#myModal" 
+            data-bs-toggle="modal" onClick="regMode()">Registrar ciudad</button>
             <br>
         </div>
         <div class="table-responsive">
-            <table class="table table-primary" id="tbl_ciudades">
+            <table class="table table-primary" id="tbl_ciudades" name="tbl_ciudades">
                 <caption>Tabla de ciudades</caption>
                 <thead>
                     <tr>
@@ -81,15 +83,17 @@
                 <tbody>
                     <?php if ($result->num_rows > 0) { 
                     while($row = $result->fetch_assoc()) { ?>
-                    <tr class="">
+                    <tr>
                         <td><?php echo $row["id"]; ?></td>
                         <td><?php echo $row["ciudad"]; ?></td>
                         <td><?php echo $row["pais"]; ?></td>
                         <td><?php echo $row["habitantes"]; ?></td>
                         <td><?php echo $row["superficie"]; ?></td>
                         <td><?php echo $row["tienemetro"]; ?></td>
-                        <td><button type="button" class="btn btn-primary">Editar</button></td>
-                        <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                        <td><button type="button" class="btn btn-primary" data-bs-target="#myModal" 
+                        data-bs-toggle="modal" onClick="editMode()">Editar</button></td>
+                        <td><button type="button" class="btn btn-danger" data-bs-target="#myModal" 
+                        data-bs-toggle="modal" onClick="deleteMode()">Eliminar</button></td>
                     </tr>
                     <?php }
                 } else{ ?>
@@ -112,7 +116,7 @@
             <h4 class="modal-title">Datos de la ciudad</h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <form action="" method="post">
+        <form action="ejercicio_2_p6.php" method="post">
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="form-floating mb-3">
@@ -178,5 +182,6 @@
         </div>
     </div>
     </div>
+    <script src="modal_helper.js"></script>
 </body>
 </html>
