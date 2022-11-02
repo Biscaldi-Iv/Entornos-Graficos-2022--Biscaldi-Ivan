@@ -18,7 +18,7 @@
         include 'funciones.php';
         $servername = "localhost";
         $username = "root";
-        $password = "12345";
+        $password = "42330102";
         $database="php_data";
         $conn = new mysqli($servername, $username, $password, $database);
         if($conn->connect_error){
