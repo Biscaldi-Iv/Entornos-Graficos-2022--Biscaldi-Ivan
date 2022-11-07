@@ -6,3 +6,4 @@
 * Practica 4: PHP Basico
 * Practica 5: PHP + email
 * Practica 6: PHP + Base de datos
+* Practica 7: PHP + Session + Cookies
