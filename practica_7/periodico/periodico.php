@@ -25,7 +25,7 @@
     }
     if (isset($_GET['btnradio'])) {
         $opc=$_GET['btnradio'];
-        setcookie("noticia", $opc, time()+3600*24);
+        setcookie("noticia", $opc, time()+3600*24, "/");
     }
     ?>
     <div class="row">
@@ -40,19 +40,20 @@
                         <div class="btn-group-vertical" role="group" aria-label="Basic checkbox toggle button group">
                             <input type="radio" class="btn-check" name="btnradio" id="btncheck1"
                             <?php if ($opc=="politica") { echo " checked "; }?>
-                            value="politica" autocomplete="off" onclick="this.form.submit()">
+                            value="politica" autocomplete="off" onclick="//this.form.submit()">
                             <label class="btn btn-outline-primary" for="btncheck1">Noticia política</label>
                             
                             <input type="radio" class="btn-check" name="btnradio" id="btncheck2" 
                             <?php if ($opc=="economia") { echo " checked "; }?>
-                            value="economia" autocomplete="off" onclick="this.form.submit()">
+                            value="economia" autocomplete="off" onclick="//this.form.submit()">
                             <label class="btn btn-outline-primary" for="btncheck2">Noticia económica</label>
                             
                             <input type="radio" class="btn-check" name="btnradio" id="btncheck3" 
                             <?php if ($opc=="deporte") { echo " checked "; }?>
-                            value="deporte" autocomplete="off" onclick="this.form.submit()">
+                            value="deporte" autocomplete="off" onclick="//this.form.submit()">
                             <label class="btn btn-outline-primary" for="btncheck3">Noticia deportiva</label>
                         </div>
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
                     </form>
                     <a class="nav-item nav-link" href="/borrar_cookies.php">Borrar cookies</a>
                 </div>
